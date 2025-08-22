@@ -1,0 +1,6 @@
+- apt: instalar paquetes o eliminarlos(update,upgrade,full-upgrade,remove,auto-remove,install)
+- dpkg: gestiona paquetes .deb(-i,-l mostrar todos las paquetes ,-p eliminar un paquete)
+- apt-get: (dist-upgrade)
+- apt-cache: (depends,mostara depedencias de un paquete, policy politica)
+- dpkg-query: consulta a la db de dpkg
+- dpkg-reconfigure: reconfigurar  un paqueto

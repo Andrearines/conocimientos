@@ -1,0 +1,12 @@
+
+- touch: crear un fichero vació(-a para registrar si abrí el archivo, -m modificar la fecha de creación )
+- cp: copiar archivos (-i confirmación,-r copiar toda la estructura)
+- mv:mover o renombrar (-i confirmación, -u sobrescribir en el archivo viejo )
+- rm: eliminar (-i confirmación,-r eliminar toda la estructura)
+- mkdir: crear directorios (-p crear mas directorios de un solo,)
+- rmdir: eliminar directorios 
+- cat:concatenar o leer archivos (-n contar lineas )
+- head:leer solo las primeras 10 lineas(-n$ asignar cuantas lineas)
+- tail:los mismo pero de abajo asia riva(-f tiempo real)
+- less: nos da el contenido de los archivos en forma de libro(+G mostar lo ultimo)
+- 

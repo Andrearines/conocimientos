@@ -1,0 +1,4 @@
+- ls :mostrar archivos (-l mas informacion(-h para mostrar el peso mas atendible),-a para archivos oculto ,-R se mete en todo  los directorios )
+- cd:cambiar de lugar 
+- pwd:nos enseña adonde estamos
+- 
