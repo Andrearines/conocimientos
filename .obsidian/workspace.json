@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ciberseguridad/web/vulns/XSS (10).md",
+                "file": "ciberseguridad/host/herramientas de terminal/Sliver (C2 Framework).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XSS (10)"
+              "title": "Sliver (C2 Framework)"
             }
           }
         ]
@@ -169,32 +169,32 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "5a52d0c055917d77",
+  "active": "3f3082cca84a8e80",
   "lastOpenFiles": [
+    "ciberseguridad/web/vulns/🗂️ SSTI – Server-Side Template Injection (Obsidian Edition).md",
+    "ciberseguridad/web/herramientas de terminal/Nuclei (para Pentesters y Red Team).md",
+    "ciberseguridad/web/herramientas de terminal/wapiti.md",
+    "linux/comandos de ayuda y soporte.md",
+    "ciberseguridad/web/herramientas de terminal/Gobuster.md",
+    "linux/navegacion.md",
+    "linux/input,ouinput,error.md",
+    "linux/gestión de ficheros.md",
+    "ciberseguridad/web/vulns/XSS (10).md",
     "ciberseguridad/web/vulns/webshell.md",
     "webshell.md",
-    "ciberseguridad/web/vulns/XSS (10).md",
     "ciberseguridad/web/vulns/webshell(php).md",
-    "ciberseguridad/web/vulns/🗂️ SSTI – Server-Side Template Injection (Obsidian Edition).md",
     "ciberseguridad/web/vulns/Documentación sobre SSTI (Server-Side Template Injection).md",
     "ciberseguridad/web/vulns",
     "linux/ficheros.md",
     "linux/configuracion.md",
-    "linux/comandos de ayuda y soporte.md",
-    "linux/navegacion.md",
-    "linux/input,ouinput,error.md",
     "linux/gestores de paquetes.md",
     "linux/gestion de user.md",
-    "linux/gestión de ficheros.md",
-    "ciberseguridad/web/herramientas de terminal/Gobuster.md",
-    "ciberseguridad/web/herramientas de terminal/wapiti.md",
     "ciberseguridad/host/herramientas de terminal/Sliver (C2 Framework).md",
     "linux/gestion de grupos.md",
     "servidor/libro de como hacer un servido/README.md",
     "linux/promnt.md",
     "servidor/Apache2.md",
     "ciberseguridad/host/visual",
-    "ciberseguridad/web/herramientas de terminal/Nuclei (para Pentesters y Red Team).md",
     "ciberseguridad/host/herramientas de terminal/nmap_completo.md",
     "ciberseguridad/host/herramientas de terminal/nmap_pentest_blue_team.md",
     "servidor/libro de como hacer un servido/22. Conclusiones.md",
